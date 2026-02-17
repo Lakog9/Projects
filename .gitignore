@@ -1,0 +1,17 @@
+﻿__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+data/
+*.gz
+*.pkl
+mondo.json
+disease_model_annotations_*.tsv
+disease_model_annotations_*.tsv.gz
+*.fq.gz
+
+*.png
+*.pdf
+*.log
