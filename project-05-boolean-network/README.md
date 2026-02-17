@@ -1,20 +1,19 @@
-# Project 5 — Boolean Network Simulation (ER+ Breast Cancer Drug Response)
+# Project 5 — Boolean Networks for ER+ Breast Cancer Drug Response
 
-Simulates an ER+ breast cancer signaling Boolean network under drug perturbations (single and combinations).
-Runs until reaching an attractor (repeated state) and scores the outcome:
+Simulates a Boolean signaling network (ER+/PI3K/AKT/MAPK) under drug perturbations and searches for drug combinations that maximize:
+**V = (#Apoptosis ON) − (#Proliferation ON)**
 
-**V = (# Apoptosis nodes ON) − (# Proliferation nodes ON)**
+## Data (download separately)
+- `breast_cancer.txt` (Boolean rules)
 
-Higher V is better.
+Place it here:
+- `project-05-boolean-network/breast_cancer.txt`
 
-## Model file (not included)
-Download `breast_cancer.txt` from:
-https://github.com/CASCI-lab/CANA/blob/master/cana/datasets/breast_cancer.txt
-
-Keep it local (do not commit).
+> The dataset is not committed (ignored).
 
 ## Run
-Example:
-
+From this folder:
 ```bash
-python project5.py --file "C:\path\to\breast_cancer.txt" --runs 1000 --N 1
+cd project-05-boolean-network
+python project5.py -h
+python project5.py --file "C:\path\to\breast_cancer.txt" --runs 1000 --mode synchronous -v final

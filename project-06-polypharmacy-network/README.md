@@ -1,11 +1,21 @@
-# Project 6 — Polypharmacy Side-Effect Association Network
+# Project 6 — Polypharmacy Side-Effect Association Network (Decagon/SNAP)
 
-Find, among side effects whose drug–drug graph has **exactly 1 connected component**, which side effect has the **largest** component.
+Streams the compressed CSV and (without networkx) finds:
+
+**Among diseases whose drug-drug graph has exactly 1 connected component,
+which disease has the largest component?**
+
+Uses Union-Find (DSU) per disease while streaming.
 
 ## Data (download separately)
-Download:
-- `ChChSe-Decagon_polypharmacy.csv.gz` from SNAP (not included in this repo)
+Download from SNAP:
+- `ChChSe-Decagon_polypharmacy.csv.gz`
 
-Preview:
+Do NOT commit it to the repo.
+
+## Run
+From this folder:
 ```bash
-gunzip -c ChChSe-Decagon_polypharmacy.csv.gz | head -n 10
+cd project-06-polypharmacy-network
+python project6.py -h
+python project6.py --csv_gz "C:\path\to\ChChSe-Decagon_polypharmacy.csv.gz"
