@@ -15,3 +15,5 @@ disease_model_annotations_*.tsv.gz
 *.png
 *.pdf
 *.log
+project-05-boolean-network/breast_cancer.txt
+project-06-polypharmacy-network/sorted_results.csv
