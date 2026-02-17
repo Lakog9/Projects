@@ -1,18 +1,17 @@
-# Project 7 — Implementing and Evaluating BPE for DNA Tokenization
+# Project 7 — Byte Pair Encoding (BPE) for DNA Tokenization
 
-Implements **Byte Pair Encoding (BPE)** training + DNA tokenization and evaluates tokenization efficiency on **chr20 (hg38)**.
+Implements BPE training and tokenization for DNA sequences (A,C,G,T) and evaluates tokenization efficiency across different vocabulary sizes (K) and training/test subsequence lengths (M).
 
 ## Data (download separately)
-Download:
-- `chr20.fa.gz` from UCSC (hg38)
-
-Place the file **in this folder**:
-- `project-07-bpe-dna/chr20.fa.gz`
-
-> The FASTA is large; it is not included in the repo.
+- hg38 chromosome 20 FASTA:
+  - `chr20.fa.gz` from UCSC
+- Preprocess:
+  - remove header line (`>chr20`)
+  - uppercase sequence
+  - join lines into one continuous string
 
 ## Run
-From this folder:
+> Adjust CLI arguments to match what `project7.py -h` shows.
+
 ```bash
-cd project-07-bpe-dna
-python project7.py
+python project7.py -h
