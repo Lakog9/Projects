@@ -114,6 +114,15 @@ def part_2(mondo_tree: Dict[str, Any], mondo_id_short: str, target_level: int = 
 
 
 if __name__ == "__main__":
-    mondo_tree = part_1("mondo.json")
-    print(part_2(mondo_tree, "MONDO_0011719"))
+    import argparse
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--mondo_json", required=True, help="Full path to mondo.json")
+    parser.add_argument("--mondo_id", required=True, help="MONDO id like MONDO_0011719")
+    parser.add_argument("--level", type=int, default=3, help="Target level (default 3)")
+    args = parser.parse_args()
+
+    mondo_tree = part_1(args.mondo_json)
+    print(part_2(mondo_tree, args.mondo_id, target_level=args.level))
+
 
